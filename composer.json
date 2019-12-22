@@ -1,11 +1,16 @@
 {
     "name": "nokobo/php-project-lvl1",
     "description": "php-project-lvl1",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Kurmanbek Nurmatov",
             "email": "nokobo.prog@gmail.com"
         }
+    ],
+    "bin": [
+        "bin/brain-games"
     ],
     "require": {}
 }
