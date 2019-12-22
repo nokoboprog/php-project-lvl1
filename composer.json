@@ -1,0 +1,11 @@
+{
+    "name": "nokobo/php-project-lvl1",
+    "description": "php-project-lvl1",
+    "authors": [
+        {
+            "name": "Kurmanbek Nurmatov",
+            "email": "nokobo.prog@gmail.com"
+        }
+    ],
+    "require": {}
+}
