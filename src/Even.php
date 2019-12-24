@@ -7,10 +7,13 @@ use function cli\prompt;
 
 function even()
 {
-    line("\nWelcome to the Brain Game!");
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
+    line();
+    line('Welcome to the Brain Game!');
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line();
     $userName = prompt('May I have your name?');
-    line("Hello, {$userName}!\n");
+    line("Hello, %s!", $userName);
+    line();
 
     $requiredCorrectAnswers = 3;
     $countCorrectAnswers = 0;
