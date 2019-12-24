@@ -18,3 +18,5 @@
 `$ brain-calc`
 
 [![asciicast](https://asciinema.org/a/290170.svg)](https://asciinema.org/a/290170)
+
+`$ brain-gcd`
