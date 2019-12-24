@@ -15,3 +15,7 @@
 `$ brain-even`
 
 [![asciicast](https://asciinema.org/a/290059.svg)](https://asciinema.org/a/290059)
+
+`$ brain-calc`
+
+
