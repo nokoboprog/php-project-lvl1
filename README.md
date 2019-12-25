@@ -22,3 +22,5 @@
 `$ brain-gcd`
 
 [![asciicast](https://asciinema.org/a/290178.svg)](https://asciinema.org/a/290178)
+
+`$ brain-progression`
