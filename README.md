@@ -40,3 +40,5 @@ Several mini-console games. To win you need to answer three questions in a row.
 [![asciicast](https://asciinema.org/a/290224.svg)](https://asciinema.org/a/290224)
 
 `$ brain-prime`
+
+[![asciicast](https://asciinema.org/a/290235.svg)](https://asciinema.org/a/290235)
