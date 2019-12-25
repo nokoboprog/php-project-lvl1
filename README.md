@@ -24,3 +24,5 @@
 [![asciicast](https://asciinema.org/a/290178.svg)](https://asciinema.org/a/290178)
 
 `$ brain-progression`
+
+[![asciicast](https://asciinema.org/a/290224.svg)](https://asciinema.org/a/290224)
