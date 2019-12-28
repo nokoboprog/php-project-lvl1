@@ -1,11 +1,11 @@
 {
     "name": "nokobo/php-project-lvl1",
-    "description": "php-project-lvl1",
+    "description": "Several mini-console games.",
     "keywords": [
         "brain games",
         "mini-console games"
     ],
-    "type": "library",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {

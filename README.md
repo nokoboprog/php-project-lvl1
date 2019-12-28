@@ -5,23 +5,23 @@
 
 ##
 
-### Installation with Composer
+### Installation with Composer:
 
 `$ composer global require nokobo/php-project-lvl1`
 
-### Description
+### Description:
 
 Several mini-console games. To win you need to answer three questions in a row.
 
-### List of games
+### List of games:
 
-* `brain-even` - specify if the number is even or not
-* `brain-calc` - find the result of the expression
-* `brain-gcd` - find the greatest common divisor of given numbers
-* `brain-progression` - find a missed number in the progression
-* `brain-prime` - specify if the number is prime or not
+* `brain-even` - specify if the number is even or not.
+* `brain-calc` - find the result of the expression.
+* `brain-gcd` - find the greatest common divisor of given numbers.
+* `brain-progression` - find a missed number in the progression.
+* `brain-prime` - specify if the number is prime or not.
 
-### How to play
+### How to run and play:
 
 `$ brain-even`
 
