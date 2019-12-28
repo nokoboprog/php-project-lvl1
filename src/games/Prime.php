@@ -14,19 +14,15 @@ function prime()
         return [$randomNumber, $correctAnswer];
     };
 
-    function isPrime($num)
+    function isPrime($number): bool
     {
-        if ($num <= 1) {
+        if ($number < 2) {
             return false;
         }
-        $array = [];
-        for ($i = 1; $i <= $num; $i++) {
-            if ($num % $i === 0) {
-                $array[] = $i;
+        for ($divider = 2; $divider <= $number / 2; $divider++) {
+            if ($number % $divider === 0) {
+                return false;
             }
-        }
-        if (count($array) > 2) {
-            return false;
         }
         return true;
     }

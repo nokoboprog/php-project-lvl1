@@ -10,9 +10,14 @@ function even()
 {
     $gameInfo = function () {
         $randomNumber = rand(1, 100);
-        $correctAnswer = ($randomNumber % 2 === 0) ? 'yes' : 'no';
+        $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
         return [$randomNumber, $correctAnswer];
     };
+
+    function isEven($number): bool
+    {
+        return $number % 2 === 0;
+    }
 
     engine(DESCRIPTION, $gameInfo);
 }
