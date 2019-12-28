@@ -2,16 +2,12 @@
 
 namespace BrainGames\Games\Calc;
 
-use PHP_CodeSniffer\Standards\MySource\Sniffs\PHP\ReturnFunctionValueSniff;
-
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\engine;
+
+const DESCRIPTION = "What is the result of the expression?\n";
 
 function calc()
 {
-    $description = "What is the result of the expression?\n";
-
     $gameInfo = function () {
         $randomNumberOne = rand(1, 10);
         $randomNumberTwo = rand(1, 10);
@@ -34,5 +30,5 @@ function calc()
         }
     }
 
-    engine($description, $gameInfo);
+    engine(DESCRIPTION, $gameInfo);
 }

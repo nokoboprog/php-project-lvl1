@@ -2,16 +2,12 @@
 
 namespace BrainGames\Games\Progression;
 
-use PHP_CodeSniffer\Standards\MySource\Sniffs\PHP\ReturnFunctionValueSniff;
-
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\engine;
+
+const DESCRIPTION = "Find the greatest common divisor of given numbers.\n";
 
 function progression()
 {
-    $description = "Find the greatest common divisor of given numbers.\n";
-
     $gameInfo = function () {
         $randomNumber = rand(3, 50);
         $randomConst = rand(1, 3);
@@ -31,5 +27,5 @@ function progression()
         return [trim($questionTail), (string) $correctAnswer];
     };
 
-    engine($description, $gameInfo);
+    engine(DESCRIPTION, $gameInfo);
 }

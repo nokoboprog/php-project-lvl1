@@ -2,16 +2,12 @@
 
 namespace BrainGames\Games\Prime;
 
-use PHP_CodeSniffer\Standards\MySource\Sniffs\PHP\ReturnFunctionValueSniff;
-
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\engine;
+
+const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
 
 function prime()
 {
-    $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
-
     $gameInfo = function () {
         $randomNumber = rand(0, 20);
         $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
@@ -35,5 +31,5 @@ function prime()
         return true;
     }
 
-    engine($description, $gameInfo);
+    engine(DESCRIPTION, $gameInfo);
 }

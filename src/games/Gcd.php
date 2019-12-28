@@ -2,16 +2,12 @@
 
 namespace BrainGames\Games\Gcd;
 
-use PHP_CodeSniffer\Standards\MySource\Sniffs\PHP\ReturnFunctionValueSniff;
-
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\engine;
+
+const DESCRIPTION = "Find the greatest common divisor of given numbers.\n";
 
 function gcd()
 {
-    $description = "Find the greatest common divisor of given numbers.\n";
-
     $gameInfo = function () {
         $randomNumberOne = rand(1, 20);
         $randomNumberTwo = rand(1, 20);
@@ -34,5 +30,5 @@ function gcd()
         return max($generalArray);
     }
 
-    engine($description, $gameInfo);
+    engine(DESCRIPTION, $gameInfo);
 }
