@@ -5,19 +5,20 @@ namespace BrainGames\Games\Progression;
 use function BrainGames\Engine\engine;
 
 const DESCRIPTION = "Find the greatest common divisor of given numbers.\n";
+const PROGRESSION_LENGTH = 10;
 
 function progression()
 {
     $gameInfo = function () {
-        $randomNumber = rand(3, 50);
-        $randomConst = rand(1, 3);
+        $randomNumber = rand(5, 50);
+        $progressionStep = rand(1, 5);
         $array = [];
-        for ($i = 0; $i < 10 * $randomConst; $i += $randomConst) {
+        for ($i = 0; $i < PROGRESSION_LENGTH * $progressionStep; $i += $progressionStep) {
             $array[] = $randomNumber + $i;
         }
-        $correctAnswer = $array[rand(0, 9)];
+        $correctAnswer = $array[array_rand($array)];
         $questionTail = '';
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
             if ($array[$i] === $correctAnswer) {
                 $questionTail .= '.. ';
             } else {

@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ATTEMPTS_QTY = 3;
+
 function engine($description, $gameInfo)
 {
     line("\nWelcome to the Brain Game!");
@@ -12,7 +14,7 @@ function engine($description, $gameInfo)
     $userName = prompt('May I have your name?');
     line("Hello, {$userName}!\n");
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ATTEMPTS_QTY; $i++) {
         [$questionTail, $correctAnswer] = $gameInfo();
         line("Question: %s", $questionTail);
         $userAnswer = prompt('Your answer');

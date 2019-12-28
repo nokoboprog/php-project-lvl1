@@ -19,7 +19,7 @@ function prime()
         if ($number < 2) {
             return false;
         }
-        for ($divider = 2; $divider <= $number / 2; $divider++) {
+        for ($divider = 2; $divider <= sqrt($number); $divider++) {
             if ($number % $divider === 0) {
                 return false;
             }
