@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const ATTEMPTS_QTY = 3;
 
-function engine($description, $gameInfo)
+function engine($description, $getQuestionAnswer)
 {
     line("\nWelcome to the Brain Game!");
     line($description);
@@ -15,8 +15,8 @@ function engine($description, $gameInfo)
     line("Hello, {$userName}!\n");
 
     for ($i = 0; $i < ATTEMPTS_QTY; $i++) {
-        [$questionTail, $correctAnswer] = $gameInfo();
-        line("Question: %s", $questionTail);
+        [$question, $correctAnswer] = $getQuestionAnswer();
+        line("Question: %s", $question);
         $userAnswer = prompt('Your answer');
         if ($correctAnswer !== $userAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);

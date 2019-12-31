@@ -9,24 +9,24 @@ const PROGRESSION_LENGTH = 10;
 
 function progression()
 {
-    $gameInfo = function () {
-        $randomNumber = rand(5, 50);
+    $getQuestionAnswer = function () {
+        $randomNum = rand(5, 50);
         $progressionStep = rand(1, 5);
-        $array = [];
+        $coll = [];
         for ($i = 0; $i < PROGRESSION_LENGTH * $progressionStep; $i += $progressionStep) {
-            $array[] = $randomNumber + $i;
+            $coll[] = $randomNum + $i;
         }
-        $correctAnswer = $array[array_rand($array)];
-        $questionTail = '';
+        $correctAnswer = $coll[array_rand($coll)];
+        $question = '';
         for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
-            if ($array[$i] === $correctAnswer) {
-                $questionTail .= '.. ';
+            if ($coll[$i] === $correctAnswer) {
+                $question .= '.. ';
             } else {
-                $questionTail .= "{$array[$i]} ";
+                $question .= "{$coll[$i]} ";
             }
         }
-        return [trim($questionTail), (string) $correctAnswer];
+        return [trim($question), (string) $correctAnswer];
     };
 
-    engine(DESCRIPTION, $gameInfo);
+    engine(DESCRIPTION, $getQuestionAnswer);
 }

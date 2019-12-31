@@ -7,28 +7,28 @@ use function BrainGames\Engine\engine;
 const DESCRIPTION = "What is the result of the expression?\n";
 const OPERATORS = ['+', '-', '*'];
 
+function calculateCorrectAnswer($num1, $num2, $operator)
+{
+    switch ($operator) {
+        case "+":
+            return $num1 + $num2;
+        case "-":
+            return $num1 - $num2;
+        case "*":
+            return $num1 * $num2;
+    }
+}
+
 function calc()
 {
-    $gameInfo = function () {
-        $randomNumberOne = rand(1, 10);
-        $randomNumberTwo = rand(1, 10);
-        $randomOperator = OPERATORS[array_rand(OPERATORS)];
-        $questionTail = "{$randomNumberOne} {$randomOperator} {$randomNumberTwo}";
-        $correctAnswer = calculate($randomNumberOne, $randomOperator, $randomNumberTwo);
-        return [$questionTail, (string) $correctAnswer];
+    $getQuestionAnswer = function () {
+        $num1 = rand(1, 10);
+        $num2 = rand(1, 10);
+        $operator = OPERATORS[array_rand(OPERATORS)];
+        $question = "{$num1} {$operator} {$num2}";
+        $correctAnswer = calculateCorrectAnswer($num1, $num2, $operator);
+        return [$question, (string) $correctAnswer];
     };
 
-    function calculate($firstNumber, $operator, $secondNumber)
-    {
-        switch ($operator) {
-            case "+":
-                return $firstNumber + $secondNumber;
-            case "-":
-                return $firstNumber - $secondNumber;
-            case "*":
-                return $firstNumber * $secondNumber;
-        }
-    }
-
-    engine(DESCRIPTION, $gameInfo);
+    engine(DESCRIPTION, $getQuestionAnswer);
 }
