@@ -11,8 +11,9 @@ function engine($description, $getQuestionAnswer)
 {
     line("\nWelcome to the Brain Game!");
     line($description);
+    line();
     $userName = prompt('May I have your name?');
-    line("Hello, {$userName}!\n");
+    line("Hello, %s!\n", $userName);
 
     for ($i = 0; $i < ATTEMPTS_QTY; $i++) {
         [$question, $correctAnswer] = $getQuestionAnswer();

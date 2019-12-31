@@ -17,15 +17,15 @@ function progression()
             $coll[] = $randomNum + $i;
         }
         $correctAnswer = $coll[array_rand($coll)];
-        $question = '';
+        $question = [];
         for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
             if ($coll[$i] === $correctAnswer) {
-                $question .= '.. ';
+                $question[] = '..';
             } else {
-                $question .= "{$coll[$i]} ";
+                $question[] = "{$coll[$i]}";
             }
         }
-        return [trim($question), (string) $correctAnswer];
+        return [trim(implode(' ', $question)), (string) $correctAnswer];
     };
 
     engine(DESCRIPTION, $getQuestionAnswer);
