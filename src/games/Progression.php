@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\engine;
 
-const DESCRIPTION = "Find the greatest common divisor of given numbers.\n";
+const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
 function progression()

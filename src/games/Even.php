@@ -4,7 +4,7 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\engine;
 
-const DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
+const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
 
 function isEven($number): bool
 {

@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\engine;
 
-const DESCRIPTION = "What is the result of the expression?\n";
+const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
 
 function calculateCorrectAnswer($num1, $num2, $operator)

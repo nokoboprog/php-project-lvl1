@@ -4,7 +4,7 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\engine;
 
-const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime($number): bool
 {
