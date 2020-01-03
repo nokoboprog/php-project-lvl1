@@ -8,16 +8,12 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function findGcd($num1, $num2)
 {
-    $coll1 = [];
-    $coll2 = [];
-    for ($i = 1, $j = 1; $i <= $num1, $j <= $num2; $i++, $j++) {
-        if (($num1 % $i === 0) && ($num2 % $j === 0)) {
-            $coll1[] = $i;
-            $coll2[] = $j;
+    $min = $num1 < $num2 ? $num1 : $num2;
+    for ($i = $min; $i > 0; $i--) {
+        if ($num1 % $i == 0 && $num2 % $i == 0) {
+            return $i;
         }
     }
-    $totalColl = array_intersect($coll1, $coll2);
-    return max($totalColl);
 }
 
 function gcd()

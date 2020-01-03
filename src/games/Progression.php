@@ -22,7 +22,7 @@ function progression()
             if ($coll[$i] === $correctAnswer) {
                 $question[] = '..';
             } else {
-                $question[] = "{$coll[$i]}";
+                $question[] = $coll[$i];
             }
         }
         return [trim(implode(' ', $question)), (string) $correctAnswer];
